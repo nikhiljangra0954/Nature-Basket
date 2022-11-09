@@ -1,0 +1,161 @@
+body{
+    font-family: 'CeraPRO-Light';
+}
+
+.home_page{
+    width: 85%;
+    margin: auto;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between; 
+    background-color: white;
+   
+}
+.right_side_header{
+    width: 70%;
+}
+.details_bar{
+    display: flex;
+    justify-content: space-between;
+}
+.contact_details{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+.search_content :nth-child(1){
+    color: #B71761;
+}
+#search_product{
+    text-align: center;
+    padding: 8px 0 8px 0;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    width: 700px;
+    cursor: pointer;
+}
+.search_section {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .search_content {
+    display: none;
+    position: absolute;
+    text-align: center;
+    background-color: #f1f1f1;
+    min-width: 700px;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .search_content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .search_content a:hover {background-color: #ddd;}
+  
+  .search_section:hover .search_content {display: block;}
+
+.right_side{
+    display: flex;
+    width: 50px;
+    justify-content: space-around;
+}
+.searchbar{
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+}
+.cart_logo{
+    border: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+#city_tag{
+    border: none;
+    border: 1px solid #ccc;
+    background-color: rgb(247, 247, 247);
+    height: 33px;
+    margin-right: -1px;
+    line-height: 30px;
+    text-align: center;
+}
+#pin{
+    border: none;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border: 1px solid #ccc;
+    height: 33px;
+    margin-right: -5px;
+    line-height: 30px;
+    text-align: center;
+}
+.search_cart_section{
+    margin-left: -1px;
+}
+.nav_bar{
+    display: flex;
+    flex-direction: row;
+}
+.cart{
+    padding-bottom: 5px;
+}
+.my_order{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    margin-left: -1px;
+    padding: 13px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.my_order:hover{
+    background-color: rgb(224, 219, 219);
+}
+.dropbtn {
+    cursor: pointer;
+    background-color: #f3f3f3;
+    color: #c13c7a;
+    padding: 13px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+  
+  .shop_cat {
+    position: relative;
+    display: inline-block;
+  }
+  
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #85b847;}
+  
+  .shop_cat:hover .dropdown-content {display: block;}
+  
+  .shop_cat:hover .dropbtn {background-color: #f3f3f3;}
