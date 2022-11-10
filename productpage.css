@@ -1,0 +1,118 @@
+.left_side{
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: row;
+    width: 220px;
+    height: 250px;
+    margin-top: 50px;
+    overflow-y: scroll;
+    margin-top: 50px;
+    margin-bottom: -42px;
+    border-radius: 10px;
+}
+.left_side1{
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: row;
+    width: 220px;
+    border-radius: 10px;
+    height: auto;
+    margin-top: 50px;
+    overflow-y: scroll;
+    padding-bottom: 10PX;
+    margin-top: 50px;
+    margin-bottom: -42px;
+}
+.fruits_veg1>h3{
+    font-size: 17px;
+    font-weight:100;
+    text-align: center;
+    margin: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    color: black;
+}
+.fruits_veg1{
+    width: 100%;
+}
+.fruits_veg{
+    width: 100%;
+}
+.fruits_veg>h3{
+    font-size: 17px;
+    font-weight:100;
+    text-align: center;
+    margin: 10px;
+    border-bottom: 1px solid #ccc;
+    border-radius: 10px;
+    padding-bottom: 5px;
+    color: #c03877;
+    cursor: pointer;
+}
+.products_page>div>h3{
+    font-size: 17px;
+    font-weight:200;
+    text-align: left;
+    margin-bottom: -30px;
+}
+.fruits_veg1>div{
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 5px;
+    border: 1px solid #c03877;
+    text-align: center;
+    color: #c03877;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    padding: 4px 0 4px 0;
+}
+.fruits_veg>div{
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    height: 12%;
+    border-radius: 10px;
+    margin-top: 5px;
+    border: 1px solid #c03877;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 5px;
+    color: #c03877;
+    transition: background-color 0.3s;
+}
+.fruits_veg>div:hover{
+    background-color: #c03877;
+    color: white;
+}
+::-webkit-scrollbar{
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    box-shadow: 1px solid #ccc;
+    border-radius: 10px;
+    width:5px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #ccc; 
+    border-radius: 20px;
+  }
+  .product_cards{
+    border: 2px solid red;
+    width: 90%;
+    height: auto;
+    /* margin-top: 100px; */
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+  }
+  .products_page{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .product_cards>div{
+        border: 2px solid blue;
+  }
