@@ -125,18 +125,57 @@
         </div>
       </div>
       <!-- mid-slide-section -->
-      <div class="banner_img">
+      <div class="banner_img1">
         <img
           src="https://gnbdevcdn.s3-ap-southeast-1.amazonaws.com/Marketing/d8cc09f5-5d68-4853-ae9a-233ceabe3acd.jpg?v=14"
           alt=""
         />
       </div>
-      <div class="banner_img">
-        <img
-          src="https://d1z88p83zuviay.cloudfront.net/BannerImages/56d58540-9be6-436e-9046-3a75e7f3928b_1320x376.jpg"
-          alt=""
-        />
+      <div class="slider">
+        <div class="banner_img">
+          <img
+            src="https://d1z88p83zuviay.cloudfront.net/BannerImages/56d58540-9be6-436e-9046-3a75e7f3928b_1320x376.jpg"
+            alt=""
+          />
+        </div>
+        <div class="banner_img">
+          <img
+            src="https://gnbdevcdn.s3-ap-southeast-1.amazonaws.com/Marketing/d8cc09f5-5d68-4853-ae9a-233ceabe3acd.jpg?v=14"
+            alt=""
+          />
+        </div>
+        <div class="banner_img">
+          <img
+            src="https://d1z88p83zuviay.cloudfront.net/BannerImages/8f6ba871-ab4e-4f01-b71c-c913dfb63f11_1320x376.jpg"
+            alt=""
+          />
+        </div>
+        <div class="banner_img">
+          <img
+            src="https://d1z88p83zuviay.cloudfront.net/BannerImages/0f2301bb-4607-47f9-859c-1c2c21642159_1320x376.jpg"
+            alt=""
+          />
+        </div>
+        <div class="banner_img">
+          <img
+            src="https://d1z88p83zuviay.cloudfront.net/BannerImages/a5ad3541-5426-47e1-b33c-0360c5e28c35_1320x376.jpg"
+            alt=""
+          />
+        </div>
+        <div class="banner_img">
+          <img
+            src="https://d1z88p83zuviay.cloudfront.net/BannerImages/404eece7-1e74-4c52-a498-50281d0c2aa2_1320x376.jpg"
+            alt=""
+          />
+        </div>
+        <div class="banner_img">
+          <img
+            src="https://d1z88p83zuviay.cloudfront.net/BannerImages/404eece7-1e74-4c52-a498-50281d0c2aa2_1320x376.jpg"
+            alt=""
+          />
+        </div>
       </div>
+      <br>
       <div class="banner_products">
         <div class="small_banner">
           <img
@@ -426,3 +465,24 @@
     </div>
   </body>
 </html>
+
+<script>
+      let count=0;
+      slideimg()
+
+      function slideimg(){
+        let i=null;
+        let slide = document.getElementsByClassName("banner_img")
+        
+        for(let i=0;i<slide.length;i++){
+          slide[i].style.display = "none"
+        }
+        count++
+        if(count>slide.length){
+          count = 1;
+        }
+        slide[count-1].style.display = "block";
+
+        setTimeout(slideimg,3000)
+      }
+</script>

@@ -1,4 +1,4 @@
- .banner_img>img{
+ .banner_img1>img,.banner_img>img{
     border-radius: 10px;
     margin: 5px 0 10px 0;
  }
