@@ -171,13 +171,24 @@
             <div>New Products</div>
           </div>
         </div>
+        <div class="left_side1">
+          <div class="fruits_veg1">
+            <h3>Filtter By Price</h3>
+              <select name="" id="filtter">
+                <option value="">Relevence</option>
+                <option value="LTH">LOW TO HIGH</option>
+                <option value="HTL">HIGH TO LOW</option>
+              </select>
+          </div>
+        </div>
         </div>
         <div class="productss">
           <p>Home > Fruits & Vegetables > Exotic Vegetables
           </p>
           <h2>EXOTIC VEGETABLES</h2>
           <div class="product_cards">
-            <div>
+            <!-- Append here -->
+            <!-- <div>
               <img
               src="https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/17d6b165-a222-4e0e-9d2e-20c34236e277_425x425.jpg"
               alt=""
@@ -193,7 +204,7 @@
             <div></div>
             <div></div>
             <div></div>
-            <div></div>
+            <div></div> -->
           </div>
       </div>
       
@@ -202,7 +213,63 @@
   </body>
 </html>
 <script>
+    let url ="https://636d0daaab4814f2b27731e6.mockapi.io/products"
 
+    let data =[]
+    async function getdata(){
+      try {
+        let res = await fetch(url)
+        let out = await res.json();
+        data = out
+        console.log(out)
+        display_products(out)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    getdata()
 
-  
+    //display all products
+
+    function display_products(out){
+      document.querySelector(".product_cards").innerHTML = ""
+
+      out.forEach(element => {
+          let div = document.createElement("div")
+
+          let image = document.createElement("img")
+          image.src = element.images
+
+          let name = document.createElement("p")
+          name.innerText = element.product
+
+          let quantity = document.createElement("p")
+          quantity.innerText = "1"+"Pc"
+
+          let price = document.createElement("p")
+            price.innerText = "MRP ₹" + element.price
+
+          let button = document.createElement("button")
+          button.innerText = "Add"
+
+          div.append(image,name,quantity,price,button)
+
+          document.querySelector(".product_cards").append(div)
+      });
+    }
+
+    let sort = document.querySelector("#filtter")
+    sort.addEventListener("change",sort_by_price)
+
+    function sort_by_price(){
+      let sorting = document.querySelector("#filtter").value;
+      if(sorting == ""){
+        display_products(data)
+      }else if(sorting == "LTH"){
+        data.sort((a,b)=> a.price - b.price)
+      }else if(sorting == "HTL"){
+        data.sort((a,b)=> b.price - a.price)
+      }
+      display_products(data)
+    }
 </script>
